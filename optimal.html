@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Optimal Page Replacer</title>
+        <meta name="description" content="Live Stimulation">
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <h1>Visualization of Algorithms</h1>
+        <div class="authors-wrap">
+            <button id="authors-button">Authors</button>
+            <ul id="author-list">
+                <li>Yukta Desai</li>
+                <li>Urvashi Vasita</li>
+                <li>Vomini Desai</li>
+                <li>Yug Thakker</li>
+                <li>Dhyani Prajapati</li>
+            </ul>
+            <button><a href="index.html">Home</a></button>
+        </div>
+        <div class="input-wrap">
+            <div class="input-section">
+                <div class="input-field-wrap">
+                    <h4>Page data</h4>
+                    <textarea id="page-data-input" rows="10" cols="80">1,2,3,4,5,6,4,4,4,5,5,5,6,6,6,7</textarea>
+                    <div class="error-wrap">
+                        <div id="invalid-page-data-error" class="error">
+                            <img src="img/error.png" alt="Error">
+                            <p>Invalid page data</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field-wrap">
+                    <h4>Buffer size</h4>
+                    <input id="buffer-size-input" value="3" type="number">
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="input-field-wrap">
+                    <h4>Page length</h4>
+                    <div class="range-input-wrap">
+                        <label for="rnd-page-length-min">Min</label>
+                        <input id="rnd-page-length-min" value="16" type="number">
+                    </div>
+                    <div class="range-input-wrap">
+                        <label for="rnd-page-length-max">Max</label>
+                        <input id="rnd-page-length-max" value="16" type="number">
+                    </div>
+                        
+                </div>
+                <div class="input-field-wrap">
+                    <h4>Buffer size</h4>
+                    <div class="range-input-wrap">
+                        <label for="rnd-buffer-min">Min</label>
+                        <input id="rnd-buffer-min" value="3" type="number">
+                    </div>
+                    <div class="range-input-wrap">
+                        <label for="rnd-buffer-max">Max</label>
+                        <input id="rnd-buffer-max" value="3" type="number">
+                    </div>
+                </div>
+                <div class="input-field-wrap">
+                    <button id="rnd-gen">Generate random data</button>
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="input-field-wrap">
+                    <h4>Execution times</h4>
+                    <input id="execute-times" value="10">
+                </div>
+                <div class="input-field-wrap">
+                    <button id="test-all">Test all algorithms</button>
+                    <div class="sk-cube-grid" id="spinner">
+                        <div class="sk-cube sk-cube1"></div>
+                        <div class="sk-cube sk-cube2"></div>
+                        <div class="sk-cube sk-cube3"></div>
+                        <div class="sk-cube sk-cube4"></div>
+                        <div class="sk-cube sk-cube5"></div>
+                        <div class="sk-cube sk-cube6"></div>
+                        <div class="sk-cube sk-cube7"></div>
+                        <div class="sk-cube sk-cube8"></div>
+                        <div class="sk-cube sk-cube9"></div>
+                    </div>
+                </div>
+                <div class="input-field-wrap">
+                    <h4>Task progress</h4>
+                    <div id="progress-bar">
+                        <div id="bar"></div>
+                    </div>
+                </div>
+                <div class="input-field-wrap">
+                    <hr>
+                    <button id="clear-all">Clear All</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="controls">
+            <br><br><button id="run-fifo">FIFO</button>
+
+            <!--<button id="run-second-chance">Second chance</button>-->
+            <!--<button id="run-clock-pro">Clock pro</button>-->
+            <!--<button id="run-wsclock">WSclock</button>-->
+            <!--<button id="run-car">CAR</button>-->
+            <button id="run-lru">LRU</button>
+            <button id="run-mru">MRU</button>
+            <button id="run-random">Random</button>
+            <button id="run-optimal">Optimal</button><br><br>
+            <button id="run-all">Execute all</button><br>
+<br>        </div>
+        <div class="chart-wrap">
+            <div id="chart-container">
+            </div>
+        </div>
+        
+        <div id="page-replace-visualizer">
+            <div id="results-wrap">
+                <h3>Results</h3>
+                <div class="dataContainer"></div>
+            </div>
+        </div>
+
+        <script src="js_3/jquery.canvasjs.min.js"></script>
+        <script src="js_3/interface.js"></script>
+        <script src="js_3/main.js"></script>
+
+    </body>
+</html>

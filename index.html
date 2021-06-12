@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Page Replacement Algorithms</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+   
+
+
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand"> 
+                        <a href="index.html"><h1 style="font-size: 30px">Page Replacement Algorithms</h1></a>
+                    </div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="about-us.html#refer">References</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div class="slider-area">
+		<div class="slider-wrapper owl-carousel">
+			<div class="slider-item home-one-slider-otem slider-item-four slider-bg-one">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+								<h1 style="text-align:center;" class="homepage-three-title">First In <span>First Out</span></h1>
+								<h2 style="text-align:center;" >FIFO </h2>
+								<div class="slider-content-btn">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+								<h1 style="text-align:center;" class="homepage-three-title">Belady <span>Anomaly</span> In FIFO</h1>
+	
+								<div class="slider-content-btn">
+	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+								<h1 style="text-align:center;" class="homepage-three-title">Least <span>Recently </span>Used </h1>
+								<h2 style="text-align:center;">LRU</h2>
+								<div class="slider-content-btn">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+           
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 style="text-align:center;" class="homepage-three-title">Most <span>Recently</span> Used</h1>
+                                <h2 style="text-align:center;">MRU</h2>
+                                <div class="slider-content-btn">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 style="text-align:center;" class="homepage-three-title">Random <span>Page</span> Replacement</h1>
+                                <div class="slider-content-btn">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 style="text-align:center;" class="homepage-three-title">Optimal <span>Page</span> Replacement</h1>
+                                <div class="slider-content-btn">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+
+    <h1 style="text-align: center;"><br><br><br>I N T R O D U C T I O N </h1><br><br>
+
+
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                       
+                        <h2>Introduction To Paging</h2>
+                        <p class="lead">Non-contiguous memory allocation is a memory allocation technique that allows storing parts of a single process in a non-contiguous manner. Different parts of the same process can be stored at different places in the main memory.</p>
+
+                        <p> Non-contiguous memory allocation is of two types:<br>
+        
+                            1)   Paging<br> 
+                            2)   Segmentation<br></p>
+
+                        <a href="#Parallax" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Translating-Logical-Address-into-Physical-Address-Diagram.png" alt="" class="img-responsive img-rounded">
+                        
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+           
+                
+
+
+	
+  
+
+            <hr class="hr1">
+
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section noover" data-stellar-background-ratio="0.7" style="background-image:url('uploads/parallax_05.png');">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <div class="customwidget text-left">
+                        <h1 id="Parallax" >Paging</h1>
+                        <p>Paging is a storage mechanism that allows OS to retrieve processes from the secondary storage into the main memory in the form of pages.Paging is used for faster access to data, and it is a logical concept.
+                            Paging is basically an equal fixed size partitioning scheme wherein the main memory and the secondary memory are divided into fixed-size partitions.
+                            The partitions in the secondary memory are called pages and the partitions of the main memory are called the frames. Pages of the process are brought into the main memory only when they are required otherwise they reside in the secondary storage. Different operating systems have different frame sizes.</p>
+                     <br><p>Example:
+                     Let us assume that the main memory is of the size 32KB and the frame size is 2KB each.
+                      The main memory will be divided into 16 frames each of 2KB. 
+                      Say there are 4 separate processes in the system namely, P1, P2, P3, P4. Each of the processes is of 8KB and all the processes are divided into a page of 2KB.  
+                      The operating system can store 1 page in one frame. At the beginning of the process, all the frames remain empty so that all the pages of the processes will get stored in a contiguous way.</p>
+                      <br><p>Now say for example that P2 and P4 are moved to the waiting state after some time and so we can say that 8 frames have become empty. Other pages can be loaded into these empty boxes. Meanwhile, there is another P5 of 16KB waiting in the ready queue. So now the process P5 is divided into 2 parts (internally contiguous ) each of 8KB. So now there are 8 non-contiguous frames present in the main memory.
+                           The CPU always generates the logical address and from that, the physical address of the main memory is generating with the help of page offset value and frame number.</p>
+                            <ul class="list-inline">
+                            <h1><li><i class="fa fa-check"></i>Advantages</li></h1>
+                            <br><p>
+  ->Easy to use memory management algorithm<br>
+  ->No need for external Fragmentation<br>
+  ->Swapping is easy between equal-sized pages and page frames.</p><br>
+                            <h1><li><i class="fa fa-check"></i> Disadvantages</li></h1>
+                                <p>->May cause Internal fragmentation.<br>
+                                    ->Complex memory management algorithm.<br>
+                                    ->Page tables consume additional memory.<br>
+                                    ->Multi-level paging may lead to memory reference overhead.<br></p>
+                            
+                        </ul><!-- end list -->
+                        
+                    </div>
+                </div><!-- end col -->
+				<div class="col-md-6">
+                    <div class="text-center image-center hidden-sm hidden-xs">
+                        <img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Page-Replacement-Algorithms-1.png" alt="" class="img-responsive wow fadeInUp">
+                    </div>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    
+    <div id="services" class="parallax section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Page Replacement Algorithms</h3>
+                
+            </div><!-- end title -->
+
+            <div class="owl-services owl-carousel owl-theme">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://media.geeksforgeeks.org/wp-content/uploads/20190412160604/fifo2.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190412160604/fifo2.png" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>First In First Out</h3>
+						<p>This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. 
+                            </p>
+                            <br>
+                            <a href="FIFO.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+					</div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://prepinsta.com/wp-content/uploads/2019/01/Beladys-Anomaly-Graph_Increased-Page-fault.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://prepinsta.com/wp-content/uploads/2019/01/Beladys-Anomaly-Graph_Increased-Page-fault.png" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Belady's Anamoly</h3>
+						<p>Belady’s anomaly is the name given to the phenomenon where increasing the number of page frames results in an increase in the number of page faults for a given memory access pattern.  </p>
+                        <br>
+                        <a href="Belady Anamoly.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://image.slidesharecdn.com/virtual-memory-and-paging-1196115868181852-4/95/virtual-memory-and-paging-35-728.jpg?cb=1196087069" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://image.slidesharecdn.com/virtual-memory-and-paging-1196115868181852-4/95/virtual-memory-and-paging-35-728.jpg?cb=1196087069" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Most Recenetly Used</h3>
+						<p>MRU Page Replacement Algorithm works on a prediction that the pages that have been used more times in the last few instructions will probably be used again and again.</p>
+                        <br>
+                        <a href="MRU.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+               
+            </div><!-- end row -->
+
+<br><br><br>
+            <div class="owl-services owl-carousel owl-theme">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://i.stack.imgur.com/ZMM0o.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://i.stack.imgur.com/ZMM0o.png" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Least Recently Used</h3>
+						<p>LRU Page Replacement Algorithm works on a prediction that the pages that have been used more times in the last few instructions will probably be used again and again. 
+                            </p>
+                            <br>
+                            <a href="LRU.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+					</div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://prepinsta.com/wp-content/uploads/2019/03/Optimal-Page-Replacement-Algorithm.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://prepinsta.com/wp-content/uploads/2019/03/Optimal-Page-Replacement-Algorithm.png" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Optimal Page Replacement</h3>
+						<p>In optimal page replacement algorithm, the page that is not used for a long time in the future is replaced.</p>
+                        <br>
+                        <a href="OPR.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://i1.wp.com/technobyte.org/wp-content/uploads/2019/12/sym.jpg?w=518&ssl=1" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://i1.wp.com/technobyte.org/wp-content/uploads/2019/12/sym.jpg?w=518&ssl=1" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Random Page Replacement</h3>
+						<p>Random replacement algorithm replaces a random page in memory. This eliminates the overhead cost of tracking page references. </p>
+                        <br>
+                        <a href="Random.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                
+                
+            </div><!-- end row -->
+
+
+
+
+
+
+
+
+
+<br><br><h1 style="text-align: center; "><b>Click Below for Live Simulation</b></h1>
+            <hr class="hr1">
+            <div class="text-center">
+                <a href="optimal.html" class="btn btn-light btn-radius btn-brd">Live Simulation</a>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+
+
+
+
+
+</body>
+</html>

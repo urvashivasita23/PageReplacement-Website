@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Page Replacement Algorithms</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+	<!--<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="left-top">
+						<div class="email-box">
+							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> youremail@gmail.com</a>
+						</div>
+						<div class="phone-box">
+							<a href="tel:1234567890"><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 890</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="right-top">
+						<div class="social-box">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
+							<ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand"> 
+                        <a href="index.html"><h1 style="font-size: 30px">First In First Out Algorithm</h1></a>
+                    </div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="about-us.html#refer">References</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="slider-area">
+    <div class="slider-wrapper owl-carousel">
+      <div class="slider-item home-one-slider-otem slider-item-four slider-bg-one">
+        <div class="container">
+          <div class="row">
+            <div class="slider-content-area">
+              <div class="slide-text">
+                <h1 style="text-align:center;" class="homepage-three-title">First In <span>First Out</span></h1>
+                <h2 style="text-align:center;" >FIFO </h2>
+                <div class="slider-content-btn">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+        <div class="container">
+          <div class="row">
+            <div class="slider-content-area">
+              <div class="slide-text">
+                <h1 style="text-align:center;" class="homepage-three-title">Belady <span>Anamoly</span> In FIFO</h1>
+  
+                <div class="slider-content-btn">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+        <div class="container">
+          <div class="row">
+            <div class="slider-content-area">
+              <div class="slide-text">
+                <h1 style="text-align:center;" class="homepage-three-title">Least <span>Recently </span>Used </h1>
+                <h2 style="text-align:center;">LRU</h2>
+                <div class="slider-content-btn">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+           
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 style="text-align:center;" class="homepage-three-title">Most <span>Recently</span> Used</h1>
+                                <h2 style="text-align:center;">MRU</h2>
+                                <div class="slider-content-btn">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 style="text-align:center;" class="homepage-three-title">Random <span>Page</span> Replacement</h1>
+                                <div class="slider-content-btn">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 style="text-align:center;" class="homepage-three-title">Optimal <span>Page</span> Replacement</h1>
+                                <div class="slider-content-btn">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </div>
+
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h4><strong>Introduction</strong></h4>
+                        
+                        <p class="lead" style="color: black">This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced page in the front of the queue is selected for removal.Let's have a look at an example for better understanding. </p>
+
+                        
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.slidesharecdn.com%2F41pagereplacementfifo-130119072015-phpapp02%2F95%2F41-page-replacement-fifo-15-638.jpg%3Fcb%3D1358580056&f=1&nofb=1" alt="" class="img-responsive img-rounded">
+                        <a href="https://www.youtube.com/watch?v=ET43MRKRuYM4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <hr class="hr1"> 
+
+            <div class="row">
+				<div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190412160604/fifo2.png" alt="" class="img-responsive img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h4><strong>Example</strong></h4>
+                        
+                        <p class="lead" style="color: black">Consider page reference string 1, 3, 0, 3, 5, 6 with 3 page frames.Find number of page faults.<br>
+          1) Initially all slots are empty, so when 1, 3, 0 came they are allocated to the empty slots —> 3 Page Faults.<br>
+          2) When 3 comes, it is already in  memory so —> 0 Page Faults.<br>
+          3) Then 5 comes, it is not available in  memory so it replaces the oldest page slot i.e 1. —> 1 Page Fault.<br>
+          4) 6 comes, it is also not available in memory so it replaces the oldest page slot i.e 3 —> 1 Page Fault.<br>
+          5) Finally when 3 come it is not avilable so it replaces 0 -> 1 page fault.</p>
+
+                        <a href="#services" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<!--<div class="parallax section parallax-off" data-stellar-background-ratio="0.9" style="background-image:url('uploads/parallax_04.jpg');">
+        <div class="container">
+            <div class="row text-center stat-wrap">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-briefcase"></i></span>
+                    <p class="stat_count">1200</p>
+                    <h3>Complated Projects</h3>
+                </div><!-- end col 
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-happy"></i></span>
+                    <p class="stat_count">3210</p>
+                    <h3>Happy Clients</h3>
+                </div><!-- end col
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-idea"></i></span>
+                    <p class="stat_count">3781</p>
+                    <h3>Customer Services</h3>
+                </div><!-- end col 
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-customer-service"></i></span>
+                    <p class="stat_count">4300</p>
+                    <h3>Answered Questions</h3>
+                </div><!-- end col 
+            </div><!-- end row 
+        </div><!-- end container 
+    </div><!-- end section -->
+
+    <div id="services" class="parallax section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Page Replacement Algorithms</h3>
+                
+            </div><!-- end title -->
+
+            <div class="owl-services owl-carousel owl-theme">
+    
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://prepinsta.com/wp-content/uploads/2019/01/Beladys-Anomaly-Graph_Increased-Page-fault.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://prepinsta.com/wp-content/uploads/2019/01/Beladys-Anomaly-Graph_Increased-Page-fault.png" alt="" class="img-responsive img-rounded">
+                    </div>
+          <div class="service-dit">
+            <h3>Belady's Anamoly</h3>
+            <p>Belady’s anomaly is the name given to the phenomenon where increasing the number of page frames results in an increase in the number of page faults for a given memory access pattern.  </p>
+                        <br>
+                        <a href="Belady Anamoly.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://image.slidesharecdn.com/virtual-memory-and-paging-1196115868181852-4/95/virtual-memory-and-paging-35-728.jpg?cb=1196087069" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://image.slidesharecdn.com/virtual-memory-and-paging-1196115868181852-4/95/virtual-memory-and-paging-35-728.jpg?cb=1196087069" alt="" class="img-responsive img-rounded">
+                    </div>
+          <div class="service-dit">
+            <h3>Most Recenetly Used</h3>
+            <p>MRU Page Replacement Algorithm works on a prediction that the pages that have been used more times in the last few instructions will probably be used again and again.</p>
+                        <br>
+                        <a href="MRU.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://i.stack.imgur.com/ZMM0o.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://i.stack.imgur.com/ZMM0o.png" alt="" class="img-responsive img-rounded">
+                    </div>
+          <div class="service-dit">
+            <h3>Least Recently Used</h3>
+            <p>LRU Page Replacement Algorithm works on a prediction that the pages that have been used more times in the last few instructions will probably be used again and again. 
+                            </p>
+                            <br>
+                            <a href="LRU.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+          </div>
+                </div>
+                <!-- end service -->
+            </div><!-- end row -->
+
+<br><br><br>
+            <div class="owl-services owl-carousel owl-theme">
+        
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://prepinsta.com/wp-content/uploads/2019/03/Optimal-Page-Replacement-Algorithm.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://prepinsta.com/wp-content/uploads/2019/03/Optimal-Page-Replacement-Algorithm.png" alt="" class="img-responsive img-rounded">
+                    </div>
+          <div class="service-dit">
+            <h3>Optimal Page Replacement</h3>
+            <p>In optimal page replacement algorithm, the page that is not used for a long time in the future is replaced.</p>
+                        <br>
+                        <a href="OPR.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="https://i1.wp.com/technobyte.org/wp-content/uploads/2019/12/sym.jpg?w=518&ssl=1" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="https://i1.wp.com/technobyte.org/wp-content/uploads/2019/12/sym.jpg?w=518&ssl=1" alt="" class="img-responsive img-rounded">
+                    </div>
+          <div class="service-dit">
+            <h3>Random Page Replacement</h3>
+            <p>Random replacement algorithm replaces a random page in memory. This eliminates the overhead cost of tracking page references. </p>
+                        <br>
+                        <a href="Random.html" class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
+                    </div>
+                </div>
+                <!-- end service -->
+
+                
+                
+            </div><!-- end row -->
+            <br><br><h1 style="text-align: center; "><b>Click Below for Live Simulation</b></h1>
+            <hr class="hr1">
+            <div class="text-center">
+                <a href="optimal.html" class="btn btn-light btn-radius btn-brd">Live Simulation</a>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end section -->
+                        
+
+    <!--<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Testimonials</h3>
+                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
+                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                            </div>
+                            <!-- end testi-meta 
+                        </div>
+                        <!-- end testimonial 
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <h4>Jacques Philips <small>- Designer</small></h4>
+                            </div>
+                            <!-- end testi-meta 
+                        </div>
+                        <!-- end testimonial 
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
+                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                            </div>
+                            <!-- end testi-meta 
+                        </div>
+                        <!-- end testimonial 
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
+                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                            </div>
+                            <!-- end testi-meta 
+                        </div>
+                        <!-- end testimonial 
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <h4>Jacques Philips <small>- Designer</small></h4>
+                            </div>
+                            <!-- end testi-meta
+                        </div>
+                        <!-- end testimonial 
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
+                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
+                            </div>
+                            <!-- end testi-meta 
+                        </div><!-- end testimonial 
+                    </div><!-- end carousel
+                </div><!-- end col 
+            </div><!-- end row 
+
+            <hr class="hr1">
+
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row 
+
+        </div><!-- end container 
+    </div><!-- end section 
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/logo-2.png" alt="" />
+                        </div>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
+                        <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
+                    </div><!-- end clearfix 
+                </div><!-- end col
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Pages</h3>
+                        </div>
+
+                        <ul class="footer-links hov">
+                            <li><a href="#">Home <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#">Blog <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#">Pricing <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#">About <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#">Faq <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#">Contact <span class="icon icon-arrow-right2"></span></a></li>
+                        </ul><!-- end links 
+                    </div><!-- end clearfix 
+                </div><!-- end col 
+				
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-distributed widget clearfix">
+                        <div class="widget-title">
+                            <h3>Subscribe</h3>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which one know this tricks.</p>
+                        </div>
+						
+						<div class="footer-right">
+							<form method="get" action="#">
+								<input placeholder="Subscribe our newsletter.." name="search">
+								<i class="fa fa-envelope-o"></i>
+							</form>
+						</div>                        
+                    </div><!-- end clearfix 
+                </div><!-- end col 
+            </div><!-- end row 
+        </div><!-- end container 
+    </footer><!-- end footer 
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">GoodWEB</a> Design By : 
+					<a href="https://html.design/">html design</a></p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container 
+    </div><!-- end copyrights 
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+
+</body>

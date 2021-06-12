@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>FIFO</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/bellady1.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="css/bellady2.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/bellady3.css" />
+		<noscript><link rel="stylesheet" href="css/bellady4.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1 style="color: black"><a href="index.html" id="logo">Belady's Anomaly</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li style="color: black"><a href="index.html">Home</a></li>
+								
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special"></article>
+							<div class="output">
+								<div class="search_bar">
+									<div class="col-6 search_box">
+										<div class="input-group">
+											<input type="text" class="form-control userinput1" placeholder="Enter maximum number of frames" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+											<div class="input-group-append" id="button-addon4" style="width: 200px">
+												<a class="btn btn-primary Enter" href="#" role="button">Enter</a>
+											</div>
+										</div>
+									</div>
+							
+							
+									<div class="col-6 search_box">
+										<div class="input-group">
+											<input type="text" class="form-control userinput2" placeholder="Add page number in sequence one by one" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+											<div class="input-group-append" id="button-addon4" style="width: 200px">
+												<a class="btn btn-primary Add" href="#" role="button">Add</a>
+												<a class="btn btn-primary refresh" href="#" role="button">Refresh</a>
+											</div>
+										</div>
+									</div>
+								</div>
+									
+								<div class="input-bar">
+									<div>
+										<div class="col-6">
+												<br><br><br><p>Input Frames:<br></p>
+										</div>
+										<div class="col-6 list-area">
+												<br><h1>
+												<ul class="input-list">
+													<!--<li class="list-block">
+													<ul class="blocks">
+													
+													<span class="badge badge-secondary output1">New</span>
+													<span class="badge badge-secondary output2">New</span>
+													<span class="badge badge-secondary output3">New</span>
+										
+													</ul>
+												</li>-->
+												</ul>
+												</h1>
+										</div>
+									</div>
+									<div>
+										<div class="input-group-append show" id="button-addon4" style="width: 200px; margin-left: 45%;">
+											<a class="btn btn-primary show-output" href="#" role="button">Show output</a>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="output_bar">
+									<div>
+										<div class="col-6">
+												<br><p>Frames:<br></p>
+										</div>
+										<div class="col-6 list-area">
+												<br><h1>
+												<ul class="list">
+													<!--<li class="list-block">
+													<ul class="blocks">
+													
+													<span class="badge badge-secondary output1">New</span>
+													<span class="badge badge-secondary output2">New</span>
+													<span class="badge badge-secondary output3">New</span>
+										
+													</ul>
+												</li>-->
+												</ul>
+												</h1>
+										</div>
+									</div>
+									<div class="fault">
+										<div class="col-6">
+												<br><p>Number of page faults:</p>
+										</div>
+										<div class="col-6">
+												<!--<br><p id="Calculate"></p>-->
+												<br><span class="badge badge-secondary" id="Calculate"></span><br><br><br><br>
+										</div>
+									</div>
+
+									<div class="d-flex justify-content-center">
+										<div id="linechart_material"></div>
+									</div>
+
+								 </div>
+							</div>
+			
+						</article>
+						
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+				
+									<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li></li><li></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript" src="assets/js/fifo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+
+
+p{
+    padding: 5px;
+  }
+  
+  .font_update{
+      font-family: sans-serif;
+  
+  }
+  
+  .badge{
+      background-color: lightgrey;
+      color: black;
+      margin: 2px;
+      height: 50px;
+      width: 50px;
+      font-size: large;
+      
+  }
+  #Calculate{
+      background-color: grey;
+      margin-left: 75px;
+  }
+  
+  .list{
+      list-style-type: none;
+  }
+  
+  .list-area{
+      padding-right: 100px;
+      max-width: 1000px;
+      margin-left: 100px;
+  }
+  
+  .miss_hit{
+      background-color: black;
+      color: white;
+      width: 100px;
+  }
+  
+  .search_box{
+      display: inline-block;
+      float: left;
+  }
+  
+  .output_bar{
+      padding-top: 60px;
+  }
+  
+  .fault{
+      display: inline-flex;
+      flex-direction: row;
+  }
+  
+  
+  
+  
